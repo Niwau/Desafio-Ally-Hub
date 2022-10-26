@@ -23,12 +23,12 @@ export const Form = () => {
 
       <S.Blockquote>
         <S.Label htmlFor="name">Nome<span>*</span></S.Label>
-        <S.Input id="name" {...register("name")} />
+        <S.Input id="name" {...register("name")}/>
       </S.Blockquote>
 
       <S.Blockquote>
         <S.Label htmlFor="email">Email<span>*</span></S.Label>
-        <S.Input id="email"  {...register("email")} />
+        <S.Input id="email"  {...register("email")}/>
       </S.Blockquote>
 
       <S.Blockquote>

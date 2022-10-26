@@ -17,8 +17,6 @@ export interface FormData {
   email: string
   phone: string
   cpf: string
-  countries: MultiValueProps
-  cities: MultiValueProps
 }
 
 export interface CityOptions {
