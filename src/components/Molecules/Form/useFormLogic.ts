@@ -3,6 +3,7 @@ import { yupResolver } from './../../../../node_modules/@hookform/resolvers/yup/
 import { useEffect, useState } from 'react'
 import { useForm, SubmitHandler } from 'react-hook-form'
 import { City, Country, FormData } from '../../../types/form'
+import { getOptions } from '../../../utils/getOptions';
 
 export function useFormLogic() {
   const { handleSubmit, register, control, formState: {errors} } = useForm<FormData>({ resolver: yupResolver(formSchema)})
@@ -21,14 +22,9 @@ export function useFormLogic() {
 
   }, [])
 
-  const countryOptions = countries.map(country => (
-    { value: country.name_ptbr, label: country.name_ptbr }
-  ))
+  const countryOptions = getOptions(countries)
+  const cityOptions = getOptions(cities)
 
-  const cityOptions = cities.map(cities => (
-    { value: cities.name_ptbr, label: cities.name_ptbr }
-  ))
-  
   const onFormSubmit : SubmitHandler<FormData>  = (data) => {
     console.log(data)
     alert("Formulário enviado!");
