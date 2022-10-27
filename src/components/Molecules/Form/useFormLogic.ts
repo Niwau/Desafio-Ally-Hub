@@ -27,7 +27,7 @@ export function useFormLogic() {
 
   const onFormSubmit : SubmitHandler<FormData>  = (data) => {
     console.log(data)
-    alert("Formulário enviado!");
+    alert("Formulário enviado! Abra o console do navegador para como as informações serão enviadas.");
   }
 
   return { handleSubmit, register, onFormSubmit, countryOptions, control, cityOptions, errors }
