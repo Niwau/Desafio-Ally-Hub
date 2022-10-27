@@ -5,13 +5,7 @@ import { Controller } from 'react-hook-form'
 
 export const Form = () => {
 
-  const { 
-    handleSubmit, 
-    register, 
-    onFormSubmit,
-    setValue,
-    control
-  } = useFormLogic()
+  const { handleSubmit, register, onFormSubmit, control, countryOptions, cityOptions } = useFormLogic()
 
   return (
     <S.Form onSubmit={handleSubmit(onFormSubmit)}>
@@ -49,10 +43,24 @@ export const Form = () => {
 
       <S.Blockquote>
         <S.Label htmlFor="country">País<span>*</span></S.Label>
+        <Controller 
+          render={({ field: {...props} }) => (
+            <Select isMulti options={countryOptions} {...props} />
+          )}
+          name='countries' 
+          control={control}
+        />
       </S.Blockquote>
 
       <S.Blockquote>
         <S.Label htmlFor="city">Cidade<span>*</span></S.Label>
+        <Controller 
+          render={({ field: {...props} }) => (
+            <Select isMulti options={cityOptions} {...props} />
+          )}
+          name='cities' 
+          control={control}
+        />
       </S.Blockquote>
 
       <S.Button>Enviar</S.Button>

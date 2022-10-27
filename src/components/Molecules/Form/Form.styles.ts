@@ -43,7 +43,7 @@ export const Input = styled.input`
 
   :focus {
     border-color: var(--primary);
-    color: #000000 ;
+    color: #000000;
   }
 
 `
