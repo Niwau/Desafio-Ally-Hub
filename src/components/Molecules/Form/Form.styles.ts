@@ -68,3 +68,7 @@ export const Button = styled.button`
   border: none;
   transition: 0.2s;
 `
+
+export const Error = styled.p`
+  color: red;
+`

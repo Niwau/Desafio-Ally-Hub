@@ -5,7 +5,7 @@ import { Controller } from 'react-hook-form'
 
 export const Form = () => {
 
-  const { handleSubmit, register, onFormSubmit, control, countryOptions, cityOptions } = useFormLogic()
+  const { handleSubmit, register, onFormSubmit, control, countryOptions, cityOptions, errors } = useFormLogic()
 
   return (
     <S.Form onSubmit={handleSubmit(onFormSubmit)}>
@@ -18,21 +18,25 @@ export const Form = () => {
       <S.Blockquote>
         <S.Label htmlFor="name">Nome<span>*</span></S.Label>
         <S.Input id="name" {...register("name")}/>
+        <S.Error>{ errors.name?.message }</S.Error>
       </S.Blockquote>
 
       <S.Blockquote>
         <S.Label htmlFor="email">Email<span>*</span></S.Label>
         <S.Input id="email" {...register("email")}/>
+        <S.Error>{ errors.email?.message }</S.Error>
       </S.Blockquote>
 
       <S.Blockquote>
         <S.Label htmlFor="phone">Telefone<span>*</span></S.Label>
         <S.Input id="phone" {...register("phone")}/>
+        <S.Error>{ errors.phone?.message }</S.Error>
       </S.Blockquote>
 
       <S.Blockquote>
         <S.Label htmlFor="cpf">CPF<span>*</span></S.Label>
         <S.Input id="cpf" {...register("cpf")}/>
+        <S.Error>{ errors.cpf?.message }</S.Error>
       </S.Blockquote>
 
       <hr />
@@ -50,6 +54,7 @@ export const Form = () => {
           name='countries' 
           control={control}
         />
+        <S.Error>{ errors.countries?.message }</S.Error>
       </S.Blockquote>
 
       <S.Blockquote>
@@ -61,6 +66,7 @@ export const Form = () => {
           name='cities' 
           control={control}
         />
+        <S.Error>{ errors.cities?.message }</S.Error>
       </S.Blockquote>
 
       <S.Button>Enviar</S.Button>
