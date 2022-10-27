@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
 import { useForm, SubmitHandler } from 'react-hook-form'
-import { CityProps, CountryProps, FormData } from '../../../types/form'
+import { City, Country, FormData } from '../../../types/form'
 
 export function useFormLogic() {
-  const [country, setCountry] = useState<CountryProps[]>([] as CountryProps[])
-  const [city, setCity] = useState<CityProps[]>([] as CityProps[])
+  const [country, setCountry] = useState<Country[]>([] as Country[])
+  const [city, setCity] = useState<City[]>([] as City[])
 
   const { handleSubmit, register, control, getValues } = useForm<FormData>({})
 

@@ -1,9 +1,19 @@
-export interface CountryProps {
+export interface Country {
   name_ptbr: string
 }
 
-export interface CityProps {
+export interface City {
   name_ptbr: string
+}
+
+export interface CityOptions {
+  value: string
+  label: string
+}
+
+export interface CountryOptions {
+  value: string
+  label: string
 }
 
 export interface FormData {
@@ -11,11 +21,7 @@ export interface FormData {
   email: string
   phone: string
   cpf: string
-  countries: CityOptions[]
+  countries: CountryOptions[]
   cities: CityOptions[]
 }
 
-export interface CityOptions {
-  value: string
-  label: string
-}

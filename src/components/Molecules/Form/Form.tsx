@@ -22,17 +22,17 @@ export const Form = () => {
 
       <S.Blockquote>
         <S.Label htmlFor="email">Email<span>*</span></S.Label>
-        <S.Input id="email"  {...register("email")}/>
+        <S.Input id="email" {...register("email")}/>
       </S.Blockquote>
 
       <S.Blockquote>
         <S.Label htmlFor="phone">Telefone<span>*</span></S.Label>
-        <S.Input id="phone"  {...register("phone")}/>
+        <S.Input id="phone" {...register("phone")}/>
       </S.Blockquote>
 
       <S.Blockquote>
         <S.Label htmlFor="cpf">CPF<span>*</span></S.Label>
-        <S.Input id="cpf"  {...register("cpf")}/>
+        <S.Input id="cpf" {...register("cpf")}/>
       </S.Blockquote>
 
       <hr />
