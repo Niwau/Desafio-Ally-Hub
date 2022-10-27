@@ -1,9 +1,11 @@
 export interface Country {
   name_ptbr: string
+  name: string
 }
 
 export interface City {
   name_ptbr: string
+  name: string
 }
 
 export interface CityOptions {
