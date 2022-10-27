@@ -29,13 +29,13 @@ export const Form = () => {
 
       <S.Blockquote>
         <S.Label htmlFor="phone">Telefone<span>*</span></S.Label>
-        <S.Input id="phone" {...register("phone")}/>
+        <S.Input id="phone" {...register("phone")} type="number"/>
         <S.Error>{ errors.phone?.message }</S.Error>
       </S.Blockquote>
 
       <S.Blockquote>
         <S.Label htmlFor="cpf">CPF<span>*</span></S.Label>
-        <S.Input id="cpf" {...register("cpf")}/>
+        <S.Input id="cpf" {...register("cpf")} type="number"/>
         <S.Error>{ errors.cpf?.message }</S.Error>
       </S.Blockquote>
 
