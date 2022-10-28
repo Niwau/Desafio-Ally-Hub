@@ -28,7 +28,7 @@ export const Form = () => {
         <S.Label htmlFor="name">
           Nome<span>*</span>
         </S.Label>
-        <S.Input id="name" {...register("name")} />
+        <S.Input id="name" {...register("name")} placeholder="Ex: Guilherme"/>
         <S.Error>{errors.name?.message}</S.Error>
       </S.Blockquote>
 
@@ -36,7 +36,7 @@ export const Form = () => {
         <S.Label htmlFor="email">
           Email<span>*</span>
         </S.Label>
-        <S.Input id="email" {...register("email")} />
+        <S.Input id="email" {...register("email")} placeholder="Ex: email@email.com" />
         <S.Error>{errors.email?.message}</S.Error>
       </S.Blockquote>
 
@@ -44,7 +44,7 @@ export const Form = () => {
         <S.Label htmlFor="phone">
           Telefone<span>*</span>
         </S.Label>
-        <S.Input id="phone" {...register("phone")} type="number" />
+        <S.Input id="phone" {...register("phone")} placeholder="Ex: xx xxxxx-xxxx"/>
         <S.Error>{errors.phone?.message}</S.Error>
       </S.Blockquote>
 
@@ -52,7 +52,7 @@ export const Form = () => {
         <S.Label htmlFor="cpf">
           CPF<span>*</span>
         </S.Label>
-        <S.Input id="cpf" {...register("cpf")} type="number" />
+        <S.Input id="cpf" {...register("cpf")} placeholder="Ex: xxx.xxx.xxx-xx"/>
         <S.Error>{errors.cpf?.message}</S.Error>
       </S.Blockquote>
 
